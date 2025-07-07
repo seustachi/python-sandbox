@@ -1,0 +1,1 @@
+source ./banking_env/Scripts/activate
