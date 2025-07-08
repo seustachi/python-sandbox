@@ -10,6 +10,9 @@ class Student:
     def is_passing(self):
         return self.grade >= 60
     
+    def is_valid(self):
+        return isinstance(self.__name, str) and isinstance(self.age, int) and isinstance(self.grade, (int, float)) and self.age > 0 and self.grade >= 0 and self.grade <= 100
+    
     @property 
     def name(self):
         return self.__name
