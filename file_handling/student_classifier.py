@@ -2,8 +2,8 @@ import csv
 
 from student import Student
 
-LOG_FILE_PATH = 'file_handling/logs.txt'
-INPUT_FILE_PATH = 'file_handling/input.csv'
+LOG_FILE_PATH = 'staging/logs.txt'
+INPUT_FILE_PATH = 'staging/input.csv'
 
 # This script reads student data from a CSV file, processes it, and logs any errors encountered during the import.
 def import_students_from_file(input_file_path, log_file_path):
@@ -29,7 +29,8 @@ def store_valid_student(student, log_file_path):
         with open(log_file_path, mode='a') as log_file:
             log_file.write(f"Valid student: {student}\n")
     except Exception as e:  
-        print(f"Error logging valid student: {e}")
+        message = f"Error logging valid student: {e}"
+        log_error(message, LOG_FILE_PATH)
 
 def store_invalid_student(student, log_file_path):
     try:
@@ -42,6 +43,7 @@ def log_error(message, log_file_path):
     try:
         with open(log_file_path, mode='a') as log_file:
             log_file.write(f"Error: {message}\n")
+            print(f"Error logged: {message}")
     except Exception as e:
         print(f"Error logging message: {e}")
 
@@ -56,11 +58,9 @@ def main():
                 store_invalid_student(student, LOG_FILE_PATH)
     except FileNotFoundError as e:
         message = f"File not found: {e}"
-        print(message)
         log_error(message, LOG_FILE_PATH)
     except Exception as e:
-        message = "An unexpected error occurred: {e}"
-        print(message)
+        message = f"An unexpected error occurred: {e}"
         log_error(message, LOG_FILE_PATH)
         
 

@@ -1,4 +1,0 @@
-Skipping invalid row: ['Bob', ' 19', ' "85"']
-Skipping invalid row: ['Bob', ' 19', ' "85"']
-Valid student: <student.Student object at 0x00000236969781A0>
-Valid student: <student.Student object at 0x0000023696823B10>

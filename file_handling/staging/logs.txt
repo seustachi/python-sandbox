@@ -1,0 +1,6 @@
+Skipping invalid row: ['Bob', ' 19', ' "85"']
+Valid student: Student(Name: Alice, Age: 20, Grade: 55)
+Valid student: Student(Name: Sam, Age: 46, Grade: 85)
+Valid student: Student(Name: Charlie, Age: 22, Grade: 90)
+Invalid student: Student(Name: David, Age: 21, Grade: 115)
+Invalid student: Student(Name: Eva, Age: -23, Grade: 75)

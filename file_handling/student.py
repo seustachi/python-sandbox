@@ -6,6 +6,9 @@ class Student:
 
     def get_info(self):
         return f"Name: {self.__name}, Age: {self.age}, Grade: {self.grade}"
+    
+    def __str__(self):
+        return f"Student(Name: {self.__name}, Age: {self.age}, Grade: {self.grade})"
 
     def is_passing(self):
         return self.grade >= 60
