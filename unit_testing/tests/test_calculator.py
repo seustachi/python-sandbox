@@ -11,3 +11,9 @@ def test_multiply():
 
 def test_divide():
     assert divide(1, 2) == 0.5 
+
+import pytest
+
+def test_divide_by_zero():
+    with pytest.raises(ZeroDivisionError):
+        divide(1, 0)
