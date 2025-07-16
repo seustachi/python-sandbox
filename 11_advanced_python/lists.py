@@ -26,11 +26,6 @@ print(f"next(squares_generator): {next(squares_generator)}")
 print(f"next(squares_generator): {next(squares_generator)}")
 print(f"next(squares_generator): {next(squares_generator)}")
 
-square = lambda x: x**2
-print(f"square(2): {square(2)}")
-print(f"square(3): {square(3)}")
-print(f"square(4): {square(4)}")
-
 
 
 
