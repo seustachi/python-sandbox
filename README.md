@@ -19,6 +19,12 @@ deactivate
 # Using numpy (should not work now !)
 py ./dummy-numpy.py
 
+# How to debug a file in python 
+Just click on the debugbutton :D
+
+# How to run a unit test ?
+
+
 
 
 to go further, here is the proposed structure for a data analysis project : 
