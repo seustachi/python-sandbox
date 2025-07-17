@@ -23,7 +23,10 @@ py ./dummy-numpy.py
 Just click on the debugbutton :D
 
 # How to run a unit test ?
+from \python-sandbox> pytest .\07_unit_testing\tests\test_calculator.py
 
+To run in IDE (Cursor, VSCode), pytest should be configured as the test framework :
+Open Command Palette → "Python: Configure Tests" → Choose pytest and select the 07_unit_testing/tests folder.
 
 
 

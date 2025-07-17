@@ -1,13 +1,15 @@
-import sklearn
 import pandas as pd
 
-from sklearn.datasets import load_iris
+import sklearn.datasets
 
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.utils import Bunch
+
+print(sklearn.__version__)
 
 
-iris = load_iris()
+iris = sklearn.datasets.load_iris()  # type: ignore
 
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 df['species'] = iris.target_names[iris.target]
@@ -44,3 +46,4 @@ axes[1,1].tick_params(axis='x', rotation=0)
 
 plt.tight_layout()
 plt.show()
+
